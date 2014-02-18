@@ -1,0 +1,36 @@
+// Listviews
+// 
+// A description.
+// 
+// Markup: <some markup with a specific {$modifier} like class or a pseudo class >
+// 
+// .class      - description of the class state
+// :pseudo     - description of the pseudo state
+// 
+// Styleguide 6 (digit number to increment eg chapter)
+
+.list-card {
+	> li {
+		width: 150px;
+		margin: 1em 0.5em;
+		float: left;
+		box-shadow: rgba(0,0,0, 0.2) 0 1px 4px;
+		background: #fafafa;
+		border-radius: 2px;
+	}
+	.name {
+		min-height: 4em;
+		padding: 1em;
+		font-weight: bold;
+		color: #666;
+	}
+	.version {
+		font-size: 12px;
+		padding: 1em 0.5em;
+		background: #CC342D;
+		color: #fff;
+	}
+}
+body section {
+	background: #333;
+}

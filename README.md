@@ -1,4 +1,3 @@
-jewelrycase
-===========
+# JewelryCase
 
-Node-kit App.
+node-webkit-app.
