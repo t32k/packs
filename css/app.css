@@ -723,25 +723,6 @@ select, button, input, textarea
 
     color: #666;
 }
-.listCard-nameBox.sass
-{
-    background: url(../img/ruby/sass.png) center center no-repeat;
-    background-size: 65%;
-}
-.listCard-nameBox.compass
-{
-    background: url(../img/ruby/compass.png) center center no-repeat;
-}
-.listCard-nameBox.bundler
-{
-    background: url(../img/ruby/bundler.png) center center no-repeat;
-    background-size: 65%;
-}
-.listCard-nameBox.jekyll
-{
-    background: url(../img/ruby/jekyll.png) center center no-repeat;
-    background-size: 85%;
-}
 
 .listCard-name
 {
@@ -755,4 +736,30 @@ select, button, input, textarea
 .barFoot
 {
     text-align: right;
+
+    border-top: 1px #ccc solid;
+}
+
+[data-package=sass] h3
+{
+    background: url(../img/ruby/sass.png) center center no-repeat;
+    background-size: 50%;
+}
+
+[data-package=compass] h3
+{
+    background: url(../img/ruby/compass.png) center center no-repeat;
+    background-size: 50%;
+}
+
+[data-package=bundler] h3
+{
+    background: url(../img/ruby/bundler.png) center center no-repeat;
+    background-size: 50%;
+}
+
+[data-package=jekyll] h3
+{
+    background: url(../img/ruby/jekyll.png) center center no-repeat;
+    background-size: 50%;
 }

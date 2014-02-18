@@ -17,29 +17,21 @@
   exec('gem list', function(err, stdout, stderr) {
     var contents = "";
     var name = stdout.match( /\w+\s/g );
+        name = name.map(function(value){
+          return value.replace(/\s/g, '');
+        });
     var version = stdout.match( /\(.+\)/g );
         version = version.map(function(value){
           return value.replace(/\(|\)|\,.+/g, '');
         });
     
-    name.forEach(function(elem, index, arr){
-      switch (elem) {
-        case 'sass ':
-          contents += '<li class="listCard-item"><p class="listCard-version">v<span class="b">' + version[index] + '</span></p><h3 class="listCard-nameBox sass"><span class="listCard-name">' + _.humanize(_.str.capitalize(elem)) + '</span></h3></li>';
-          break;
-        case 'compass ':
-          contents += '<li class="listCard-item"><p class="listCard-version">v<span class="b">' + version[index] + '</span></p><h3 class="listCard-nameBox compass"><span class="listCard-name">' + _.humanize(_.str.capitalize(elem)) + '</span></h3></li>';
-          break;
-        case 'jekyll ':
-          contents += '<li class="listCard-item"><p class="listCard-version">v<span class="b">' + version[index] + '</span></p><h3 class="listCard-nameBox jekyll"><span class="listCard-name">' + _.humanize(_.str.capitalize(elem)) + '</span></h3></li>';
-          break;
-        case 'bundler ':
-          contents += '<li class="listCard-item"><p class="listCard-version">v<span class="b">' + version[index] + '</span></p><h3 class="listCard-nameBox bundler"><span class="listCard-name">' + _.humanize(_.str.capitalize(elem)) + '</span></h3></li>';
-          break;
-        default:
-          contents += '<li class="listCard-item"><p class="listCard-version">v<span class="b">' + version[index] + '</span></p><h3 class="listCard-nameBox"><span class="listCard-name">' + _.humanize(_.str.capitalize(elem)) + '</span></h3></li>';
-      }
-      ;
+    name.forEach(function(elem, index, arr) {
+
+      contents += '<li class="listCard-item" data-package="'
+                + elem +'"><p class="listCard-version">v<span class="b">'
+                + version[index] + '</span></p><h3 class="listCard-nameBox"><span class="listCard-name">'
+                + _.humanize(elem) + '</span></h3></li>';
+      
     });
 
     $eList.html(contents);
@@ -53,7 +45,7 @@
 
   // Rubyのバージョン表示
   exec('ruby --version', function(err, stdout, stderr) {
-    $eRubyVersion.html(stdout);
+    $eRubyVersion.html(_.humanize(stdout));
   });
 })();
 
