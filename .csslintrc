@@ -8,5 +8,6 @@
   "fallback-colors": false,
   "zero-units": false,
   "box-sizing": false,
-  "font-sizes": false
+  "font-sizes": false,
+  "gradients" : false
 }

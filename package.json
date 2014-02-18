@@ -9,20 +9,25 @@
   },
   "author": "Koji Ishimoto",
   "scripts": {
-    "start" : "node_modules/nodewebkit/bin/nodewebkit"
+    "start": "node_modules/nodewebkit/bin/nodewebkit"
+  },
+  "dependencies": {
+    "nodewebkit": "~0.8.4-2",
+    "underscore": "~1.6.0",
+    "underscore.string": "~2.3.3"
   },
   "devDependencies": {
     "grunt": "~0.4.2",
     "grunt-kss": "~0.2.4",
     "grunt-sass": "~0.10.0",
     "grunt-csso": "~0.5.2",
-    "grunt-image": "~0.4.6",
     "grunt-csscomb": "~2.0.1",
     "grunt-webfont": "~0.3.2",
     "grunt-spritesmith": "~1.22.0",
     "grunt-autoprefixer": "~0.6.5",
     "grunt-contrib-watch": "~0.5.3",
     "grunt-contrib-connect": "~0.6.0",
-    "grunt-contrib-csslint": "~0.2.0"
+    "grunt-contrib-csslint": "~0.2.0",
+    "grunt-contrib-concat": "~0.3.0"
   }
 }

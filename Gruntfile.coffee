@@ -20,7 +20,16 @@ module.exports = (grunt) ->
         options:
           port: 8080
           base: ''
-          open: 'http://localhost:8080/'
+
+    concat:
+      app:
+        src: [
+          'src/javascripts/lib/jquery/jquery.js',
+          'src/javascripts/lib/underscore/underscore.js',
+          'src/javascripts//lib/backbone/backbone.js',
+          'src/javascripts/main.js'
+        ]
+        dest: 'js/app.js' 
 
     # Sort CSS properties in specific order.
     csscomb:
@@ -43,18 +52,6 @@ module.exports = (grunt) ->
         files:
           'css/app.min.css': ['css/app.css']
 
-    # Optimize PNG, JPEG, GIF images with grunt task.
-    image:
-      options:
-        optimizationLevel: 3
-      dist:
-        files: [
-          expand: true
-          cwd: "img/"
-          src: ["**/*.{png,jpg,gif}"]
-          dest: "img/"
-        ]
-
     # Grunt task to compile Sass SCSS to CSS
     sass:
       dist:
@@ -68,23 +65,26 @@ module.exports = (grunt) ->
       css:
         files: ['src/stylesheets/**/*.scss']
         tasks: ['stylesheet']
-
+      js:
+        files: ['src/javascripts/**/*.js']
+        tasks: ['script']
 
   # Load the plugins.
   grunt.loadNpmTasks 'grunt-sass'
   grunt.loadNpmTasks 'grunt-csso'
-  # grunt.loadNpmTasks 'grunt-image'
   grunt.loadNpmTasks 'grunt-csscomb'
   grunt.loadNpmTasks 'grunt-webfont'
   grunt.loadNpmTasks 'grunt-autoprefixer'
   grunt.loadNpmTasks 'grunt-contrib-watch'
   grunt.loadNpmTasks 'grunt-contrib-connect'
+  grunt.loadNpmTasks 'grunt-contrib-concat'
   grunt.loadNpmTasks 'grunt-contrib-csslint'
 
 
   # Tasks.
   grunt.registerTask 'default', ['develop']
   grunt.registerTask 'stylesheet', ['sass', 'autoprefixer', 'csscomb', 'csslint']
+  grunt.registerTask 'script', ['concat']
   grunt.registerTask 'develop', ['connect:app', 'watch']
   grunt.registerTask 'typeset', ['webfont', 'stylesheet']
   grunt.registerTask 'publish', ['stylesheet', 'kss','connect:doc', 'watch:doc']

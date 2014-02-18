@@ -1,116 +1,3 @@
-@font-face {
-    font-family: 'myfont';
-    font-weight: normal;
-    font-style: normal;
-
-    src: url('/files/font/myfont-165a1ce8bfb947828896adcacf58555f.woff') format('woff'), url('/files/font/myfont-165a1ce8bfb947828896adcacf58555f.ttf') format('truetype');
-}
-
-[class^='icon-']:before, [class*=' icon-']:before
-{
-    font-family: 'myfont';
-    font-weight: normal;
-    font-style: normal;
-
-    display: inline-block;
-
-    text-decoration: inherit;
-}
-
-.icon-arrow-b:before
-{
-    content: '\f100';
-}
-
-.icon-arrow-l:before
-{
-    content: '\f101';
-}
-
-.icon-arrow-r:before
-{
-    content: '\f102';
-}
-
-.icon-arrow-t:before
-{
-    content: '\f103';
-}
-
-.icon-check:before
-{
-    content: '\f104';
-}
-
-.icon-leaf-h:before
-{
-    content: '\f105';
-}
-
-.icon-leaf-p:before
-{
-    content: '\f106';
-}
-
-.icon-maple:before
-{
-    content: '\f107';
-}
-
-.icon-minus:before
-{
-    content: '\f108';
-}
-
-.icon-plus:before
-{
-    content: '\f109';
-}
-
-.icon-star:before
-{
-    content: '\f10a';
-}
-
-.sprt-a
-{
-    background-image: url('/files/img/sprite/tabs.png');
-    background-repeat: no-repeat;
-    background-size: 151px 99px;
-}
-
-.sprt-a-bird1
-{
-    width: 30px;
-    height: 25px;
-
-    background-position: 0 -74px;
-}
-
-.sprt-a-bird2
-{
-    width: 90px;
-    height: 74px;
-
-    background-position: 0 0;
-}
-
-.sprt-a-bird3
-{
-    width: 60px;
-    height: 49px;
-
-    background-position: -91px 0;
-}
-
-.sprt-a-bird4
-{
-    width: 30px;
-    height: 25px;
-
-    background-position: -31px -74px;
-}
-
 
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, select, button, input, textarea, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
@@ -165,6 +52,7 @@ body
     line-height: 1.3;
 
     color: #444;
+    background: url(../img/bg-stardust.png) repeat;
 
     -webkit-text-size-adjust: 100%;
 }
@@ -757,149 +645,108 @@ select, button, input, textarea
 
 
 
-
-.btn
+.barHead
 {
-    line-height: 42px;
-
-    display: block;
+    font-size: 13px;
+    line-height: 22px;
 
     padding: 0 1em;
 
-    text-align: center;
-
-    color: #fff;
-    border-radius: 20px;
-}
-.btn.is-pressed
-{
-    box-shadow: rgba(0, 0, 0, .6) 0 2px 4px 0 inset;
-}
-.btn.is-disabled
-{
-    opacity: .5;
+    color: #768291;
+    border-bottom: 1px #ccc solid;
+    background: #fff;
 }
 
-.btn-a
+.headerA
 {
-    background: #157038;
-}
-
-.btn-b
-{
-    background: #b3cf4d;
-}
-
-.btn-c
-{
-    background: #818181;
-}
-
-
-.input
-{
-    padding: 10px;
-
-    border: 1px #bbb solid;
-    border-radius: 4px;
-}
-
-.header
-{
-    line-height: 24px;
-
-    position: relative;
-
-    padding-right: 10px;
-
-    text-align: right;
-
-    border-bottom: 1px #bbb solid;
-    background: #eee;
-}
-
-.headline
-{
+    font-size: 15px;
     font-weight: bold;
+    line-height: 44px;
 
-    padding: 1em;
+    padding: 0 1em;
 
-    background: #f2f2f2;
+    background: #efefef;
+    box-shadow: rgba(0, 0, 0, .5) 0 1px 4px;
 }
-.headline img
+
+.headerA-icon
 {
     margin-right: 4px;
 
-    vertical-align: -2px;
+    vertical-align: -4px;
 }
 
-
-
-.box-foot
+.headerA-version
 {
-    padding: 2em;
-
-    border-top: 1px #ccc solid;
+    font-size: 13px;
+    font-weight: normal;
 }
 
-.list-card > li
+.listCard-item
 {
     float: left;
 
     width: 150px;
-    margin: 1em .5em;
+    margin: .5em;
 
-    border-radius: 2px;
-    background: #fafafa;
+    border-radius: 3px;
+    background: #efefef;
+    background-clip: padding-box;
     box-shadow: rgba(0, 0, 0, .2) 0 1px 4px;
 }
-.list-card .name
+
+.listCard-version
+{
+    font-size: 13px;
+    line-height: 33px;
+
+    padding: 0 1em;
+
+    color: #fff;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    background: -webkit-linear-gradient(315deg, #e53a34 0%, #cc342d 100%);
+    background:         linear-gradient(135deg, #e53a34 0%, #cc342d 100%);
+}
+.listCard-version .b
+{
+    font-size: 15px;
+}
+
+.listCard-nameBox
 {
     font-weight: bold;
 
-    min-height: 4em;
-    padding: 1em;
+    min-height: 4.5em;
+    padding: 10px 0;
 
     color: #666;
 }
-.list-card .name.sass
+.listCard-nameBox.sass
 {
     background: url(../img/ruby/sass.png) center center no-repeat;
     background-size: 65%;
 }
-.list-card .name.compass
+.listCard-nameBox.compass
 {
     background: url(../img/ruby/compass.png) center center no-repeat;
 }
-.list-card .name.bundler
+.listCard-nameBox.bundler
 {
     background: url(../img/ruby/bundler.png) center center no-repeat;
     background-size: 65%;
 }
-.list-card .name.jekyll
+.listCard-nameBox.jekyll
 {
     background: url(../img/ruby/jekyll.png) center center no-repeat;
     background-size: 85%;
 }
-.list-card .version
-{
-    font-size: 12px;
 
-    padding: 1em .5em;
-
-    color: #fff;
-    border-bottom-right-radius: 2px;
-    border-bottom-left-radius: 2px;
-    background: -webkit-linear-gradient(315deg, #e53a34 0%, #cc342d 100%);
-    background:         linear-gradient(135deg, #e53a34 0%, #cc342d 100%);
-}
-.list-card .version b
+.listCard-name
 {
-    font-size: 14px;
-}
+    padding: 0 .5em;
 
-body
-{
-    background: -webkit-linear-gradient(315deg, #45484d 0%, #333 100%);
-    background:         linear-gradient(135deg, #45484d 0%, #333 100%);
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    background: rgba(239, 239, 239, .8);
 }

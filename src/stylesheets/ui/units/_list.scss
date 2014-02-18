@@ -1,56 +1,76 @@
-// Listviews
-// 
-// A description.
-// 
-// Markup: <some markup with a specific {$modifier} like class or a pseudo class >
-// 
-// .class      - description of the class state
-// :pseudo     - description of the pseudo state
-// 
-// Styleguide 6 (digit number to increment eg chapter)
+.barHead {
+	padding: 0 1em;
+	border-bottom: 1px #ccc solid;
+	background: #fff;
+	color: #768291;
+	font-size: 13px;
+	line-height: 22px;
+}
 
-.list-card {
-	> li {
-		width: 150px;
-		margin: 1em 0.5em;
-		float: left;
-		box-shadow: rgba(0,0,0, 0.2) 0 1px 4px;
-		background: #fafafa;
-		border-radius: 2px;
-	}
-	.name {
-		min-height: 4em;
-		padding: 1em;
-		font-weight: bold;
-		color: #666;
-		&.sass {
-			background: url(../img/ruby/sass.png) center center no-repeat;
-			background-size: 65%;
-		}
-		&.compass {
-			background: url(../img/ruby/compass.png) center center no-repeat;
-		}
-		&.bundler {
-			background: url(../img/ruby/bundler.png) center center no-repeat;
-			background-size: 65%;
-		}
-		&.jekyll {
-			background: url(../img/ruby/jekyll.png) center center no-repeat;
-			background-size: 85%;
-		}
-	}
-	.version {
-		font-size: 12px;
-		padding: 1em 0.5em;
-		background: linear-gradient(135deg, #e53a34 0%,#cc342d 100%);
-		color: #fff;
-		border-bottom-left-radius: 2px;
-		border-bottom-right-radius: 2px;
-		b {
-			font-size: 14px;
-		}
+.headerA {
+	padding: 0 1em;
+	background: #efefef;
+	font-weight: bold;
+	font-size: 15px;
+	line-height: 44px;
+	box-shadow: rgba(0,0,0,0.5) 0 1px 4px;
+}
+.headerA-icon {
+	margin-right: 4px;
+	vertical-align: -4px;
+}
+.headerA-version {
+	font-weight: normal;
+	font-size: 13px;
+}
+
+.listCard-item {
+	float: left;
+	margin: 0.5em;
+	width: 150px;
+	border-radius: 3px;
+	background: #efefef;
+	background-clip: padding-box;
+	box-shadow: rgba(0,0,0,0.2) 0 1px 4px;
+}
+.listCard-version {
+	padding: 0 1em;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	background: linear-gradient(135deg, #e53a34 0%,#cc342d 100%);
+	color: #fff;
+	font-size: 13px;
+	line-height: 33px;
+	.b {
+		font-size: 15px;
 	}
 }
-body {
-	background: linear-gradient(135deg, #45484d 0%,#333333 100%); 
+.listCard-nameBox {
+	padding: 10px 0;
+	min-height: 4.5em;
+	color: #666;
+	font-weight: bold;
+	&.sass {
+		background: url(../img/ruby/sass.png) center center no-repeat;
+		background-size: 65%;
+	}
+	&.compass {
+		background: url(../img/ruby/compass.png) center center no-repeat;
+	}
+	&.bundler {
+		background: url(../img/ruby/bundler.png) center center no-repeat;
+		background-size: 65%;
+	}
+	&.jekyll {
+		background: url(../img/ruby/jekyll.png) center center no-repeat;
+		background-size: 85%;
+	}
 }
+.listCard-name {
+	padding: 0 0.5em;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+	background: rgba(#efefef, 0.8);
+}
+
+
