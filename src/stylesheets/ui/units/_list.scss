@@ -3,6 +3,7 @@
 	border-bottom: 1px #ccc solid;
 	background: #fff;
 	color: #768291;
+	font-weight: bold;
 	font-size: 13px;
 	line-height: 22px;
 }
@@ -10,10 +11,10 @@
 .headerA {
 	padding: 0 1em;
 	background: #efefef;
+	box-shadow: rgba(0,0,0,0.5) 0 1px 4px;
 	font-weight: bold;
 	font-size: 15px;
 	line-height: 44px;
-	box-shadow: rgba(0,0,0,0.5) 0 1px 4px;
 }
 .headerA-icon {
 	margin-right: 4px;
@@ -73,4 +74,8 @@
 	background: rgba(#efefef, 0.8);
 }
 
+.barFoot {
+	@extend .barHead;
+	text-align: right;
+}
 

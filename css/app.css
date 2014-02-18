@@ -645,9 +645,10 @@ select, button, input, textarea
 
 
 
-.barHead
+.barHead, .barFoot
 {
     font-size: 13px;
+    font-weight: bold;
     line-height: 22px;
 
     padding: 0 1em;
@@ -749,4 +750,9 @@ select, button, input, textarea
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
     background: rgba(239, 239, 239, .8);
+}
+
+.barFoot
+{
+    text-align: right;
 }

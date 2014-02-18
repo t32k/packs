@@ -4,6 +4,7 @@
       _  = require('underscore'),
       exec = require('child_process').exec,
       $eList = $('#js-list'),
+      $eRubyVersion = $('#js-rubyVersion');
       $eGemVersion = $('#js-gemVersion');
 
   _.str = require('underscore.string');
@@ -21,22 +22,22 @@
           return value.replace(/\(|\)|\,.+/g, '');
         });
     
-    name.forEach(function(element, index, array){
-      switch (element) {
+    name.forEach(function(elem, index, arr){
+      switch (elem) {
         case 'sass ':
-          contents += '<li class="listCard-item"><p class="listCard-version">v<span class="b">' + version[index] + '</span></p><h3 class="listCard-nameBox sass"><span class="listCard-name">' + _.humanize(_.str.capitalize(element)) + '</span></h3></li>';
+          contents += '<li class="listCard-item"><p class="listCard-version">v<span class="b">' + version[index] + '</span></p><h3 class="listCard-nameBox sass"><span class="listCard-name">' + _.humanize(_.str.capitalize(elem)) + '</span></h3></li>';
           break;
         case 'compass ':
-          contents += '<li class="listCard-item"><p class="listCard-version">v<span class="b">' + version[index] + '</span></p><h3 class="listCard-nameBox compass"><span class="listCard-name">' + _.humanize(_.str.capitalize(element)) + '</span></h3></li>';
+          contents += '<li class="listCard-item"><p class="listCard-version">v<span class="b">' + version[index] + '</span></p><h3 class="listCard-nameBox compass"><span class="listCard-name">' + _.humanize(_.str.capitalize(elem)) + '</span></h3></li>';
           break;
         case 'jekyll ':
-          contents += '<li class="listCard-item"><p class="listCard-version">v<span class="b">' + version[index] + '</span></p><h3 class="listCard-nameBox jekyll"><span class="listCard-name">' + _.humanize(_.str.capitalize(element)) + '</span></h3></li>';
+          contents += '<li class="listCard-item"><p class="listCard-version">v<span class="b">' + version[index] + '</span></p><h3 class="listCard-nameBox jekyll"><span class="listCard-name">' + _.humanize(_.str.capitalize(elem)) + '</span></h3></li>';
           break;
         case 'bundler ':
-          contents += '<li class="listCard-item"><p class="listCard-version">v<span class="b">' + version[index] + '</span></p><h3 class="listCard-nameBox bundler"><span class="listCard-name">' + _.humanize(_.str.capitalize(element)) + '</span></h3></li>';
+          contents += '<li class="listCard-item"><p class="listCard-version">v<span class="b">' + version[index] + '</span></p><h3 class="listCard-nameBox bundler"><span class="listCard-name">' + _.humanize(_.str.capitalize(elem)) + '</span></h3></li>';
           break;
         default:
-          contents += '<li class="listCard-item"><p class="listCard-version">v<span class="b">' + version[index] + '</span></p><h3 class="listCard-nameBox"><span class="listCard-name">' + _.humanize(_.str.capitalize(element)) + '</span></h3></li>';
+          contents += '<li class="listCard-item"><p class="listCard-version">v<span class="b">' + version[index] + '</span></p><h3 class="listCard-nameBox"><span class="listCard-name">' + _.humanize(_.str.capitalize(elem)) + '</span></h3></li>';
       }
       ;
     });
@@ -48,6 +49,11 @@
   // Gemのバージョン表示
   exec('gem --version', function(err, stdout, stderr) {
     $eGemVersion.html(' v' + stdout);
+  });
+
+  // Rubyのバージョン表示
+  exec('ruby --version', function(err, stdout, stderr) {
+    $eRubyVersion.html(stdout);
   });
 })();
 
