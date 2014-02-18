@@ -806,12 +806,13 @@ select, button, input, textarea
 
 .header
 {
-    font-size: 20px;
-    line-height: 44px;
+    line-height: 24px;
 
     position: relative;
 
-    padding-left: 10px;
+    padding-right: 10px;
+
+    text-align: right;
 
     border-bottom: 1px #bbb solid;
     background: #eee;
@@ -824,6 +825,12 @@ select, button, input, textarea
     padding: 1em;
 
     background: #f2f2f2;
+}
+.headline img
+{
+    margin-right: 4px;
+
+    vertical-align: -2px;
 }
 
 
@@ -855,6 +862,25 @@ select, button, input, textarea
 
     color: #666;
 }
+.list-card .name.sass
+{
+    background: url(../img/ruby/sass.png) center center no-repeat;
+    background-size: 65%;
+}
+.list-card .name.compass
+{
+    background: url(../img/ruby/compass.png) center center no-repeat;
+}
+.list-card .name.bundler
+{
+    background: url(../img/ruby/bundler.png) center center no-repeat;
+    background-size: 65%;
+}
+.list-card .name.jekyll
+{
+    background: url(../img/ruby/jekyll.png) center center no-repeat;
+    background-size: 85%;
+}
 .list-card .version
 {
     font-size: 12px;
@@ -862,10 +888,18 @@ select, button, input, textarea
     padding: 1em .5em;
 
     color: #fff;
-    background: #cc342d;
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+    background: -webkit-linear-gradient(315deg, #e53a34 0%, #cc342d 100%);
+    background:         linear-gradient(135deg, #e53a34 0%, #cc342d 100%);
+}
+.list-card .version b
+{
+    font-size: 14px;
 }
 
-body section
+body
 {
-    background: #333;
+    background: -webkit-linear-gradient(315deg, #45484d 0%, #333 100%);
+    background:         linear-gradient(135deg, #45484d 0%, #333 100%);
 }

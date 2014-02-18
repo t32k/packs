@@ -23,14 +23,34 @@
 		padding: 1em;
 		font-weight: bold;
 		color: #666;
+		&.sass {
+			background: url(../img/ruby/sass.png) center center no-repeat;
+			background-size: 65%;
+		}
+		&.compass {
+			background: url(../img/ruby/compass.png) center center no-repeat;
+		}
+		&.bundler {
+			background: url(../img/ruby/bundler.png) center center no-repeat;
+			background-size: 65%;
+		}
+		&.jekyll {
+			background: url(../img/ruby/jekyll.png) center center no-repeat;
+			background-size: 85%;
+		}
 	}
 	.version {
 		font-size: 12px;
 		padding: 1em 0.5em;
-		background: #CC342D;
+		background: linear-gradient(135deg, #e53a34 0%,#cc342d 100%);
 		color: #fff;
+		border-bottom-left-radius: 2px;
+		border-bottom-right-radius: 2px;
+		b {
+			font-size: 14px;
+		}
 	}
 }
-body section {
-	background: #333;
+body {
+	background: linear-gradient(135deg, #45484d 0%,#333333 100%); 
 }
