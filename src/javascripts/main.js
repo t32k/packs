@@ -1,6 +1,7 @@
 +(function(){
 
-  var _  = require('underscore'),
+  var $ = require('jquery'),
+      _  = require('underscore'),
       exec = require('child_process').exec,
       $eList = $('#js-list'),
       $eGemVersion = $('#js-gemVersion');
@@ -11,9 +12,6 @@
   // All functions, include conflict, will be available through _.str object
   _.str.include('Underscore.string', 'string'); // => true
 
-console.log(_.str.capitalize('epeli'))
-
-console.log(_.clean("foo"));
   // メインリストの構築
   exec('gem list', function(err, stdout, stderr) {
     var contents = "";

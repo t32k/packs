@@ -24,9 +24,6 @@ module.exports = (grunt) ->
     concat:
       app:
         src: [
-          'src/javascripts/lib/jquery/jquery.js',
-          'src/javascripts/lib/underscore/underscore.js',
-          'src/javascripts//lib/backbone/backbone.js',
           'src/javascripts/main.js'
         ]
         dest: 'js/app.js' 
