@@ -44,7 +44,7 @@
   });
 
   // Rubyのバージョン表示
-  exec('ruby --version', function(err, stdout, stderr) {
+  exec("ruby --version | awk '{print $1, $2}'", function(err, stdout, stderr) {
     $eRubyVersion.html(_.humanize(stdout));
   });
 })();
