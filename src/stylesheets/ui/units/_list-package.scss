@@ -1,8 +1,0 @@
-$packages: sass, compass, bundler, jekyll;
-
-@each $item in $packages {
-	[data-package=#{$item}] h3 {
-		background: url(../img/ruby/#{$item}.png) center center no-repeat;
-		background-size: 50%;
-	}
-}

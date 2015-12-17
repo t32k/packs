@@ -1,3 +1,3 @@
-# JewelryCase
+# Packs
 
-node-webkit-app.
+A GUI app for [npm](https://www.npmjs.com/).
